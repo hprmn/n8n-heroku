@@ -12,19 +12,19 @@ parse_url() {
 ARG_URL=${1:-""}
 
 # override if config vars detected
-if [ "$DATABASE_URL" ]
-then 
-    ARG_URL=$DATABASE_URL
-	echo $DATABASE_URL;
-	echo "postgres config detected"
+# if [ "$DATABASE_URL" ]
+# then 
+#     ARG_URL=$DATABASE_URL
+# 	echo $DATABASE_URL;
+# 	echo "postgres config detected"
 
-elif [ "$MONGODB_URI" ]
-then 
-    ARG_URL=$MONGODB_URI
-	echo "mongo config detected"
+# elif [ "$MONGODB_URI" ]
+# then 
+#     ARG_URL=$MONGODB_URI
+# 	echo "mongo config detected"
 
-else
-    echo "no config vars found"
+# else
+#     echo "no config vars found"
 fi
 
 # disable diagnostics
