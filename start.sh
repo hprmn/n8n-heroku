@@ -25,7 +25,7 @@ ARG_URL=${1:-""}
 
 # else
 #     echo "no config vars found"
-fi
+# fi
 
 # disable diagnostics
 export N8N_DIAGNOSTICS_ENABLED=false
